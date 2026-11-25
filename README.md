@@ -6,6 +6,11 @@ At RecargaPay, a fintech app with millions of users, I built payment services in
 
 #### Featured projects
 
+**[reforma-tributaria-classifier](https://github.com/ewerttonbravo/reforma-tributaria-classifier)** *(in development)*: suggests the tax classification (CST, cClassTrib) of each product for Brazil's consumption tax reform with Claude, and checks it against the Receita Federal's official tax calculator. An accountant confirms every suggestion.
+- LLM inside a Java 25 / Spring Boot backend through the official Anthropic SDK: structured output into a typed record, official code list in a cached system prompt.
+- Guardrails: the model can only choose from the official list; off-list or low-confidence answers go to human review with the reason; refusals and truncated or malformed answers are typed failures, never suggestions.
+- Event-driven on Kafka, hexagonal architecture verified by ArchUnit, 100% line, branch and mutation coverage on domain and application.
+
 **[wallet-service](https://github.com/ewerttonbravo/wallet-service)**: open-source digital wallet microservice in Java 25 and Spring Boot.
 - Double-entry, append-only ledger with rules enforced by the database: any balance can be audited and rebuilt.
 - Mandatory idempotency keys on deposits, withdrawals and transfers.
